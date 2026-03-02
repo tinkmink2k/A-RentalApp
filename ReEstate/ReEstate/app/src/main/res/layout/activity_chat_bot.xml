@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_main">
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/ivBack"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        android:layout_marginStart="5dp"
+        android:padding="4dp"
+        app:srcCompat="@drawable/baseline_arrow_back_ios_24"
+        android:tint="@color/white"
+        app:layout_constraintTop_toTopOf="@id/cardView"
+        app:layout_constraintBottom_toBottomOf="@id/cardView"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardView"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="50dp"
+        app:cardBackgroundColor="@color/white"
+        app:cardCornerRadius="50dp"
+        app:cardElevation="0dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/ivAvatar"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop"
+            app:srcCompat="@drawable/icon_chatbot"/>
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:fontFamily="@font/raleway_bold"
+        android:text="Homie AI - Giải đáp mọi thắc mắc của bạn"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/cardView"
+        app:layout_constraintStart_toEndOf="@+id/cardView"
+        app:layout_constraintTop_toTopOf="@+id/cardView"/>
+
+    <HorizontalScrollView
+        android:id="@+id/scrollCategories"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:paddingHorizontal="10dp"
+        android:scrollbars="none"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/cardView">
+
+        <com.google.android.material.chip.ChipGroup
+            android:id="@+id/chipGroupCategories"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:selectionRequired="true"
+            app:singleSelection="true">
+
+            <!--            chip 1 = cc_1 Gia ca va Chi phi-->
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chipPrice"
+                style="@style/Widget.MaterialComponents.Chip.Choice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Giá Cả"
+                android:textColor="@color/black"
+                app:chipBackgroundColor="@color/white"/>
+
+            <!--            chip 2 = cc_2 Quy trinh Mua/Ban/Thue-->
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chipProcess"
+                style="@style/Widget.MaterialComponents.Chip.Choice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Quy Trình"
+                android:textColor="@color/black"
+                app:chipBackgroundColor="@color/white"/>
+
+            <!--            chip 3 = cc_3 Dich vu Ho tro Khach hang-->
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chipSupport"
+                style="@style/Widget.MaterialComponents.Chip.Choice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Hỗ Trợ"
+                android:textColor="@color/black"
+                app:chipBackgroundColor="@color/white"/>
+
+            <!--            chip 4 = cc_4 Phap ly va Giay to-->
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chipLegal"
+                style="@style/Widget.MaterialComponents.Chip.Choice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Hợp Lý"
+                android:textColor="@color/black"
+                app:chipBackgroundColor="@color/white"/>
+
+            <!--            chip 5 = cc_5 Tu van Dau tu-->
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chipInvest"
+                style="@style/Widget.MaterialComponents.Chip.Choice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Đầu Tư"
+                android:textColor="@color/black"
+                app:chipBackgroundColor="@color/white"/>
+
+            <!--            chip 6 =  cc_6 Thong tin ve Khu vuc-->
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chipArea"
+                style="@style/Widget.MaterialComponents.Chip.Choice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Khu Vực"
+                android:textColor="@color/black"
+                app:chipBackgroundColor="@color/white"/>
+
+            <!--            chip 7 = cc_7 Dang tin va Tai khoan-->
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chipAccount"
+                style="@style/Widget.MaterialComponents.Chip.Choice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Tài khoản"
+                android:textColor="@color/black"
+                app:chipBackgroundColor="@color/white"/>
+
+        </com.google.android.material.chip.ChipGroup>
+    </HorizontalScrollView>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/bg_group_chat"
+        app:layout_constraintBottom_toTopOf="@+id/layoutSend"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/scrollCategories"
+        app:stackFromEnd="true"
+        tools:listitem="@layout/item_self_message"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="#777777"
+        app:layout_constraintBottom_toTopOf="@+id/layoutSend"/>
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:id="@+id/layoutSend"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="horizontal"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        app:layout_constraintBottom_toTopOf="@+id/recycler2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/edMessage"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@android:color/transparent"
+            android:gravity="center_vertical"
+            android:minHeight="50dp"
+            android:paddingHorizontal="15dp"
+            android:text="Chọn một trong số những câu hỏi mẫu dưới đây để chúng tôi nắm bắt được yêu cầu cụ thể của bạn ❤️"
+            android:textColor="#777777"
+            android:textSize="14sp"/>
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycler2"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@color/white"
+        android:paddingVertical="5dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHeight_percent="0.3"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+    <RelativeLayout
+        android:id="@+id/layoutLoading"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#1A343434"
+        android:clickable="true"
+        android:focusable="true"
+        android:visibility="gone">
+    </RelativeLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

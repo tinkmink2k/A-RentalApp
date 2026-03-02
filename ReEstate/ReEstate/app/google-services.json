@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "86940204042",
+    "project_id": "rentahome-83d37",
+    "storage_bucket": "rentahome-83d37.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:86940204042:android:a5f1edf26384e7687a33f3",
+        "android_client_info": {
+          "package_name": "edu.re.estate"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBLio6cR4UQZC25d0q9OknykeeccJaOcls"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
